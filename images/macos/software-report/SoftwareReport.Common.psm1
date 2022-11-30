@@ -508,6 +508,11 @@ function Get-BicepVersion {
     return "Bicep CLI $bicepVersion"
 }
 
+function Get-kopsVersion {
+    $kopsVersion = Run-Command "kops version" | Take-Part -Part 3
+    return "Kubernetes Operations $kopsVersion"
+}
+
 function Get-KotlinVersion {
     $kotlinVersion = Run-Command "kotlin -version" | Take-Part -Part 2
     return "Kotlin $kotlinVersion"
