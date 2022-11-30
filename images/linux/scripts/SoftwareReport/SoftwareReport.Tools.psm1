@@ -32,6 +32,12 @@ function Get-BicepVersion {
     return "Bicep $bicepVersion"
 }
 
+function Get-kopsVersion {
+    (kops version | Out-String) -match  "Kubernetes Operations version (?<version>\d+\.\d+\.\d+)" | Out-Null
+    $kopsVersion = $Matches.Version
+    return "Kubernetes Operations $kopsVersion"
+}
+
 function Get-CodeQLBundleVersion {
     $CodeQLVersionsWildcard = Join-Path $Env:AGENT_TOOLSDIRECTORY -ChildPath "CodeQL" | Join-Path -ChildPath "*"
     $CodeQLVersionPath = Get-ChildItem $CodeQLVersionsWildcard | Select-Object -First 1 -Expand FullName

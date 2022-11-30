@@ -117,6 +117,12 @@ Describe "Bicep" {
     }
 }
 
+Describe "kops" {
+    It "kops" {
+        "kops version" | Should -ReturnZeroExitCode
+    }
+}
+
 Describe "Go" {
     It "Go" {
         "go version" | Should -ReturnZeroExitCode

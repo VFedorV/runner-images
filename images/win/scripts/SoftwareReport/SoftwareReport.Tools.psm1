@@ -30,6 +30,13 @@ function Get-BicepVersion {
     return "Bicep $bicepVersion"
 }
 
+function Get-kopsVersion {
+    (kops version | Out-String) -match  "Kubernetes Operations version (?<version>\d+\.\d+\.\d+)" | Out-Null
+    $kopsVersion = $Matches.Version
+    return "Kubernetes Operations $kopsVersion"
+}
+
+
 function Get-RVersion {
     ($(cmd /c "Rscript --version 2>&1") | Out-String) -match "Rscript .* version (?<version>\d+\.\d+\.\d+)" | Out-Null
     $rVersion = $Matches.Version

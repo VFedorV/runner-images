@@ -278,6 +278,7 @@ build {
                         "${path.root}/scripts/installers/azure-devops-cli.sh",
                         "${path.root}/scripts/installers/basic.sh",
                         "${path.root}/scripts/installers/bicep.sh",
+                        "${path.root}/scripts/installers/kops.sh",
                         "${path.root}/scripts/installers/aliyun-cli.sh",
                         "${path.root}/scripts/installers/apache.sh",
                         "${path.root}/scripts/installers/aws.sh",

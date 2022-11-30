@@ -22,6 +22,12 @@ Describe "Bicep" {
     }
 }
 
+Describe "kops" {
+    It "kops" {
+        "kops version" | Should -ReturnZeroExitCode
+    }
+}
+
 Describe "GitVersion" -Skip:(Test-IsWin22) {
     It "gitversion is installed" {
         "gitversion /version" | Should -ReturnZeroExitCode

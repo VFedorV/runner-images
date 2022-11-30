@@ -14,6 +14,12 @@ Describe "Bicep" {
     }
 }
 
+Describe "kops" {
+    It "kops" {
+        "kops version" | Should -ReturnZeroExitCode
+    }
+}
+
 Describe "Rust" {
     BeforeAll {
         $env:PATH = "/etc/skel/.cargo/bin:/etc/skel/.rustup/bin:$($env:PATH)"

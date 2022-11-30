@@ -213,6 +213,7 @@ build {
       "./provision/core/pypy.sh",
       "./provision/core/pipx-packages.sh",
       "./provision/core/bicep.sh",
+      "./provision/core/kops.sh",
       "./provision/core/graalvm.sh",
       "./provision/core/codeql-bundle.sh"
     ]
